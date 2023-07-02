@@ -11,6 +11,7 @@
 	<meta name="author" content="" />
 
 	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 	<link rel="shortcut icon" href="favicon.ico">
 
 	<link href="https://fonts.googleapis.com/css?family=Karla:400,700" rel="stylesheet">
@@ -29,6 +30,7 @@
 	<link rel="stylesheet" href="css/magnific-popup.css">
 
 	<link rel="stylesheet" href="css/style.css">
+	
 	<style>
 		@font-face {
 			font-family: 'Pretendard-SemiBold';
@@ -170,10 +172,10 @@
 									<div class="col-md-6">
 										<div class="services animate-box">
 											<h3>자격증</h3>
-											<h4> SQL개발자(SQLD)<span> 2022.12</span></h3>
-											<h4> 정보처리기사<span> 2022.11</span></h3>
-											<h4> 워드프로세서<span> 2019.11</span></h3>
-											<h4> 컴퓨터활용능력1급<span> 2019.10</span></h3>
+											<h4> SQL개발자(SQLD)<span> 2022.12</span></h4>
+											<h4> 정보처리기사<span> 2022.11</span></h4>
+											<h4> 워드프로세서<span> 2019.11</span></h4>
+											<h4> 컴퓨터활용능력1급<span> 2019.10</span></h4>
 										</div>
 										<div class="services animate-box">
 											<h3>
@@ -244,26 +246,27 @@
 									</div>
 									<div class="col-md-4">
 										<div class="col-md-12 col-md-offset-0 animate-box intro-heading">
-											<h3 style="font-size: 25px;">DATABASE</h3>
-											<span>Maria DB</span>
-											<span>MyBatis</span>
+											<h3 style="font-size: 25px;">Java</h3>
+											<span>캡슐화</span>
+											<span>상속</span>
+											<span>추상화</span>
+											<span>다형성</span>
+											<span>컬렉션</span>
 										</div>
 									</div>
 									<div class="col-md-4">
 										<div class="col-md-12 col-md-offset-0 animate-box intro-heading">
-											<h3 style="font-size: 25px;">BACK-END</h3>
-											<span>Java</span>
-											<span>JSP</span>
-											<span>Spring Legacy</span>
-											
+											<h3 style="font-size: 25px;">Spring</h3>
+											<span>DI</span>
+											<span>AOP</span>
 										</div>
 									</div>
 									<div class="col-md-4">
 										<div class="col-md-12 col-md-offset-0 animate-box intro-heading">
-											<h3 style="font-size: 25px;">Tech</h3>
-											<span>JQuery</span>
-											<span>Ajax</span>
-											<span>BootStrap</span>
+											<h3 style="font-size: 25px;">MariaDB</h3>
+											<span>DDL, DML, DCL</span>
+											<span>ANSI JOIN</span>
+											<span>Sub Query</span>
 										</div>
 									</div>
 								</div>
@@ -294,19 +297,186 @@
 					</div>
 				</div>
 
+				<div id="homi01" class="w3-modal">
+					<div class="w3-modal-content w3-animate-zoom w3-card-4">
+						<header class="w3-container w3-blue"> 
+							<span onclick="document.getElementById('homi01').style.display='none'" 
+							class="w3-button w3-display-topright">닫기</span>
+						</header>
+						<div>
+							<img src="images/호미짐_ERD.png" width="100%">
+						</div>
+					</div>
+				</div>
+
+				<div id="shoe01" class="w3-modal">
+					<div class="w3-modal-content w3-animate-zoom w3-card-4">
+						<header class="w3-container w3-blue"> 
+							<span onclick="document.getElementById('shoe01').style.display='none'" 
+							class="w3-button w3-display-topright">닫기</span>
+						</header>
+						<div>
+							<img src="images/슈레이스_ERD.png" width="100%">
+						</div>
+					</div>
+				</div>
+
 				<div class="row animate-box">
 					<!--바로가기 링크-->
 					<div class="flex2" >
 						<br>
-						<a class="btn btn-primary btn-outline" href="#p1">슈레이스</a>
-						<a class="btn btn-primary btn-outline" href="#p2">숫자야구게임</a>
+						<a class="w3-button w3-black" href="#p1">호미짐</a> &nbsp;
+						<a class="w3-button w3-black" href="#p2">슈레이스</a>
 					</div>
 
 					<div>
-						<!--신발커뮤니티-->
+						<!-- 쇼핑몰 -->
 						<div class="item">
 							<div class="col-md-12">
 								<div class="article" id="p1">
+									<a href="" target="_blank" class="blog-img">
+										<div><img class="img-responsive" src="images/호미짐_메인페이지.JPG"></div>
+										<div class="overlay"></div>
+										<div class="link">
+											<span class="read">Go to Project</h2>
+										</div>
+									</a>
+									<div class="desc">
+										<div class="flex">
+											<div>
+												<span class="meta">스프링 레거시 기반 2차 팀 프로젝트</span>
+												<h3 style="font-size: 35px; font-family:'Pretendard-SemiBold';">
+													<a style="color: black;" target="_blank" href="">호미짐</a>
+												</h3>
+												<span style="font-family:'Pretendard-SemiBold'; position:absolute; top:45px; font-size: 14px;">제목을 클릭하면 해당 페이지로 이동합니다.</span>
+											</div>
+										</div>
+
+										<div>
+											<table class="table">
+												<tr>
+													<th>프로젝트 개요</th>
+													<th>개발환경</th>
+												</tr>
+												<tr>
+													<td>
+														기간 : 2023.06.12 ~ 2023.07.13 (4주) <br>
+														인원 : 2명	<br>
+														역할 : 팀장	<br>
+														<br><br>
+														1차 프로젝트인 커뮤니티 사이트는 관리자와 사용자의 페이지가 같은 파일에서 JSTL 조건문으로만 달리하여 구현하였습니다. <br><br>
+														하지만 쇼핑몰 프로젝트는 관리자와 사용자 페이지가 나뉘게 된다면 보안, 기능 및 권한 제한, 사용자 경험, 유지 보수 및 확장성 측면에서 많은 이점을 얻을 수 있게 되어 팀장인 저는 관리자 페이지를 담당하기로 하였습니다.
+													</td>
+													<td>
+														<span>Language</span> Java, HTML5, CSS3, JavaScript<br>
+														<span>Tech</span> JQuery, Ajax<br>
+														<span>Database</span> MariaDB<br>
+														<span>FrameWork</span> Spring, MyBatis, Bootstrap<br>
+														<span>TOOL</span> Eclipse, HeidiSQL, VSCode
+
+														<br><br><br><br>
+														<div style="text-align: left;">
+															<button onclick="document.getElementById('homi01').style.display='block'" class="w3-button w3-blue">ERD</button>
+															<a href="" target="_blank" class="w3-button w3-indigo">Github</a>
+														</div>
+													</td>
+												</tr>
+												<tr>
+													<th colspan="2">사용기술</th>
+												</tr>
+												<tr>
+													<td colspan="2">
+														<ol>
+															<li><span class="b-title">AOP</span>
+																<ul>
+																	<li><span class="s-title">사용한 이유</span>
+																		<div>- 컨트롤러에서 메서드를 실행하기 전에 관리자 외 사용자의 접근을 막기 위한 조건 검사를 코드 중복을 피하기 위해 모듈화하였습니다.</div>
+																		<div>- AOP를 활용하여 해당 조건 검사를 모듈화한 Advice를 Aspect로 분리하여 핵심 로직과 분리하였습니다.</div>
+																	</li>
+																</ul>
+															</li>
+															<li><span class="b-title">Jquery(Ajax)</span>
+																<ul>
+																	<li><span class="s-title">사용한 이유</span>
+																		<div>- 중복된 데이터 입력을 실시간으로 확인하여 방지하였습니다.</div>
+																		<div>- 특정 영역의 페이징 처리 및 로드를 동적으로 구현하였습니다.</div>
+																		<div>- 주문 및 환불 상태 변경과 같은 작업을 비동기적으로 처리하여 페이지 전체를 다시 로드하지 않고도 가능하게 하였습니다.</div>
+																	</li>
+																</ul>
+															</li>
+														</ol>
+													</td>
+												</tr>
+												<tr>
+													<th colspan="2">담당 업무</th>
+												</tr>
+												<tr>
+													<td colspan="2">
+														담당 업무 : DB설계, 관리자 페이지(전체), 사용자 페이지(고객센터, 챌린지 이벤트)<br><br>
+														<ol>
+															<li><span class="b-title">DB설계</span>
+																<ul>
+																	<li><span class="s-title">Maria DB</span>
+																		<div>- 각 테이블 간의 연관성을 고려하여 외래 키 관계와 제약 조건(연쇄 삭제, 변경, No 액션)을 설정하였습니다.</div>
+																	</li>
+																</ul>
+															</li>
+															<li><span class="b-title">관리자 페이지</span>
+																<ul>
+																	<li><span class="s-title">페이징 및 검색</span>
+																		<div>- 페이징 알고리즘을 사용 (이전 : -1, 다음 : +5)</div>
+																		<div>- 검색 기능은 마이바티스 동적 쿼리를 사용하였습니다.</div>
+																	</li>
+																	<li><span class="s-title">메인 페이지</span>
+																		<div>- 오늘 날짜를 기준으로 주문 상태에 따른 건 수를 가져와서 JSON 객체로 반환하여 표시하였습니다.</div>
+																		<div>- 최근 7일간의 매출 금액, 취소 금액, 환불 금액 및 해당 건 수를 가져와서 JSON 객체로 반환 후, 차트와 테이블로 표시하였습니다.</div>
+																	</li>
+																	<li><span class="s-title">상품 등록, 수정</span>
+																		<div>- multiple 속성을 추가하여 다중 파일을 업로드할 수 있도록 하였습니다.</div>
+																		<div>- 제품 이미지 수정은 수정 폼에서 파일 타입 인풋의 값이 변경되었을 때만 수정되도록 구현하였습니다.</div>
+																	</li>
+																	<li><span class="s-title">옵션 상세, 재고 관리</span>
+																		<div>- 옵션 상세 정보에는 해당 제품의 판매내역과 입고 내역 목록을 ajax로 가져와 출력하였습니다.</div>
+																		<div>- 입고 수량의 수정이 필요하면 바뀌기전 수량값을 DB에서 빼고, 수정 수량을 다시 업데이트 합니다.</div>
+																	</li>
+																	<li><span class="s-title">주문 관리, 환불 관리</span>
+																		<div>- 상세보기 버튼 클릭 시 모달창에 Ajax를 사용하여 해당 정보를 JSON 형태로 가져와 출력하였습니다.</div>
+																		<div>- 주문 상태 변경은 Ajax를 사용하여 처리하고, 배송완료로 변경 시 주문 제품의 재고가 차감됩니다.</div>
+																		<div>- 환불 신청은 환불 반려와 환불 승인 버튼으로 처리되며, 상태 변경 시 재고가 증가 또는 동결됩니다.</div>
+																	</li>
+																	<li><span class="s-title">매출 분석</span>
+																		<div>- 날짜 범위를 지정하여 검색하면 매출 금액, 취소 금액, 환불 금액의 합계와 평균을 확인할 수 있습니다.</div>
+																	</li>
+																	<li><span class="s-title">포인트 지급</span>
+																		<div>- @Transactional 어노테이션을 사용하여 트랜잭션 처리를 하였습니다.</div>
+																		<div>- 1. 회원 포인트 update 2. 지급 내역 insert 3. 지급 상태 update</div>
+																	</li>
+																	<li><span class="s-title">매니저 등록</span>
+																		<div>- 아이디와 이름은 중복 여부를 ajax로 확인합니다.</div>
+																		<div>- 비밀번호와 비밀번호 재입력은 값의 일치 여부를 체크합니다.</div>
+																	</li>
+																	<li><span class="s-title">FAQ 자주하는 질문 (@RestController)</span>
+																		<div>- RESTful API를 구현하여 CRUD 기능을 단일 .jsp 파일에 Ajax를 사용하여 처리하였습니다.</div>
+																	</li>
+																	<li><span class="s-title">1:1 문의</span>
+																		<div>- mail.properties 파일과 javax.mail, javax.activation 라이브러리를 활용하여 문의 답변 시 사용자에게 이메일을 보냅니다.</div>
+																	</li>
+																</ul>
+															</li>
+														</ol>
+													</td>
+												</tr>
+											</table>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!--신발커뮤니티-->
+						<div class="item">
+							<div class="col-md-12">
+								<div class="article" id="p2">
 									<a href="http://14.36.141.71:10062/first_prj/" target="_blank" class="blog-img">
 										<div><img class="img-responsive" src="images/슈레이스_후기게시판.JPG"></div>
 										<div class="overlay"></div>
@@ -317,7 +487,7 @@
 									<div class="desc">
 										<div class="flex">
 											<div>
-												<span class="meta">JSP기반 1차 프로젝트</span>
+												<span class="meta">JSP 모델2 기반 1차 팀 프로젝트</span>
 												<h3 style="font-size: 35px; font-family:'Pretendard-SemiBold';">
 													<a style="color: black;" target="_blank" href="http://14.36.141.71:10062/first_prj/">슈레이스</a>
 												</h3>
@@ -329,7 +499,7 @@
 											<table class="table">
 												<tr>
 													<th>프로젝트 개요</th>
-													<th>개발내용</th>
+													<th>개발 환경</th>
 												</tr>
 												<tr>
 													<td>
@@ -341,11 +511,17 @@
 														팀원과의 협의 후 역할 분담을 정확하게 나누고 진행하였습니다.
 													</td>
 													<td>
-														- 개인 이메일 인증과 기타 유효성 검사를 통한 회원가입<br>
-														- 여러 주제의 자유게시판, 사진 위주의 상품 후기게시판 <br>
-														- 회원제 신발 응모 이벤트<br>
-														- 크롤링을 사용해 발매 신발 정보와 여러 소식을 접함<br>
-														- 회원간 소통이 가능한 쪽지 기능<br>
+														<span>Language</span> Java, HTML5, CSS3, JavaScript<br>
+														<span>Tech</span> JQuery, Ajax<br>
+														<span>Database</span> MariaDB<br>
+														<span>FrameWork</span> MyBatis, Bootstrap<br>
+														<span>TOOL</span> Eclipse, HeidiSQL, VSCode
+
+														<br><br><br><br>
+														<div style="text-align: left;">
+															<button onclick="document.getElementById('shoe01').style.display='block'" class="w3-button w3-blue">ERD</button>
+															<a href="https://github.com/JinkyuJeong/first_prj" target="_blank" class="w3-button w3-indigo">Github</a>
+														</div>
 													</td>
 												</tr>
 												<tr>
@@ -387,9 +563,6 @@
 																	<li><span class="s-title">게시글 공개/비공개</span>
 																		<div>- 게시글 각각의 체크박스를 만들고, jstl c:set 변수에 게시글 번호를 반복문을 돌면서 추가하여 체크된 게시물 번호만 컨트롤러에서 넘겨 db에서 공개 여부 값을 참으로 만들어 처리하였습니다.</div>
 																	</li>
-																	<li><span class="s-title">이전글/다음글</span>
-																		<div>- 현재 게시물 번호를 파라미터로 받아 연관서브쿼리를 사용하여 이전 게시물의 번호와 다음 게시물의 번호를 리턴하여 그 게시물로 이동할 수 있게 구현하였습니다.</div>
-																	</li>
 																	<li><span class="s-title">게시글 추천</span>
 																		<div>- 회원만 추천 가능하게 조건설정을 하였고, 추천 버튼을 누르면 ajax를 이용하여 게시물 번호와 회원의 닉네임을 파라미터로 받아 추천 테이블로 insert 하였고, board 테이블의 추천 수는 1이 오르도록 update 하였습니다.</div>
 																	</li>
@@ -419,116 +592,7 @@
 														</ol>
 													</td>
 												</tr>
-												<tr>
-													<th colspan="2">개발환경</th>
-												</tr>
-												<tr>
-													<td colspan="2">
-														<span>Language</span> Java, HTML5, CSS3, JavaScript<br>
-														<span>Library</span> JQuery, MyBatis, BootStrap<br>
-														<span>Database</span> MariaDB<br>
-														<span>WAS</span> Apache Tomcat9<br>
-														<span>TOOL</span> Eclipse, HeidiSQL
-													</td>
-												</tr>
 											</table>
-											<div style="text-align: end;">
-												<a href="" onclick="toggleERD(); return false;" class="btn btn-primary">ERD</a>
-												<a href="https://github.com/goodee-project/58booking_b" target="_blank" class="btn btn-primary">Github</a>
-											</div>
-											<div id="erd" style="text-align: right; display: none;">
-												<img src="images/슈레이스_ERD.png" alt="">
-											</div>
-											<script>
-												function toggleERD() {
-														$("#erd").toggle();
-												}
-										</script>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-
-						<!--숫자야구게임-->
-						<div class="item">
-							<div class="col-md-12">
-								<div class="article" id="p2">
-									<a href="https://github.com/JinkyuJeong/game_prj" target="_blank" class="blog-img">
-										<div><img class="img-responsive" src="images/숫자야구게임.png"></div>
-										<div class="overlay"></div>
-										<div class="link">
-											<span class="read">Go to Project</h2>
-										</div>
-									</a>
-									<div class="desc">
-										<div class="flex">
-											<div>
-												<span class="meta">자바스크립트 기반 토이프로젝트</span>
-												<h3 style="font-size: 35px; font-family:'Pretendard-SemiBold';">
-													<a style="color: black;" target="_blank" href="http://14.36.141.71:10062/first_prj/">숫자야구게임</a>
-												</h3>
-											</div>
-										</div>
-
-										<div>
-											<table class="table">
-												<tr>
-													<th>프로젝트 개요</th>
-													<th></th>
-												</tr>
-												<tr>
-													<td>
-														기간 : 2023.03.27 ~ 2023.03.30 (4일) <br>
-														인원 : 1명	<br>
-														<br><br>
-														백준알고리즘에서 풀었던 숫자야구문제를 참고하여 게임을 제작하였습니다.
-													</td>
-													<td>
-													</td>
-												</tr>
-												<tr>
-													<th colspan="2">개발내용</th>
-												</tr>
-												<tr>
-													<td colspan="2">
-														<ol>
-															<li><span class="b-title">기능</span>
-																<ul>
-																	<li><span class="s-title">사용자 입력 중복숫자 체크 / 0 체크 함수</span>
-																		<div>- 사용자 입력값을 split함수를 사용하여 배열로 만든 후 반복문을 통해 0이 있거나 또는 같은 숫자가 있는지 중복체크를 하였습니다.</div>
-																	</li>
-																	<li><span class="s-title">채팅창 li태그 생성 함수</span>
-																		<div>- 사용자 입력값과 컬러문자열을 매개변수로 받아 li태그를 생성해서 채팅 ul태그에에 append하였습니다.</div>
-																	</li>
-																	<li><span class="s-title">생성된 li태그 자동 포커싱 함수</span>
-																		<div>- 채팅 ul태그에 마지막 li를 가져와서 포커싱하고 ul.scrollTo 함수를 사용해 스크롤을 내리는 함수입니다.</div>
-																	</li>
-																	<li><span class="s-title">숫자게임의 타이머 함수</span>
-																		<div>- 밀리초 변수에 100을 넣어서 인터벌함수를 사용해 1씩 내려서 0이되면 1초가 카운트 되도록 이중으로 타이머를 설정하였습니다.</div>
-																		<div>- 남은 시간초에 따라 조건을 부여하여 메세지가 출력되도록, 중간에 답을 맞추게 된다면 타이머클리어 함수를 사용해 종료되도록 구현하였습니다.</div>
-																	</li>
-																	<li><span class="s-title">사용자가 입력한 숫자를 분석하는 함수</span>
-																		<div>- 시스템값과 사용자입력값을 각각 split하여서 배열에 담고 이중 for문을 사용하여 인덱스를 활용해 자릿수와 숫자가 같으면 strike 카운트를 올리고 숫자만 같으면 ball 카운트를 올립니다.</div>
-																	</li>
-																</ul>
-															</li>
-														</ol>
-													</td>
-												</tr>
-												<tr>
-													<th colspan="2">개발환경</th>
-												</tr>
-												<tr>
-													<td colspan="2">
-														<span>Language</span> HTML5, CSS3, JavaScript<br>
-														<span>TOOL</span> Vscode
-													</td>
-												</tr>
-											</table>
-											<div style="text-align: end;">
-												<a href="https://github.com/JinkyuJeong/game_prj" target="_blank" class="btn btn-primary">Github</a>
-											</div>
 										</div>
 									</div>
 								</div>
