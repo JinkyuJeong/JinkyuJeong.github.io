@@ -174,7 +174,6 @@
 											<h3>자격증</h3>
 											<h4> SQL개발자(SQLD)<span> 2022.12</span></h4>
 											<h4> 정보처리기사<span> 2022.11</span></h4>
-											<h4> 워드프로세서<span> 2019.11</span></h4>
 											<h4> 컴퓨터활용능력1급<span> 2019.10</span></h4>
 										</div>
 										<div class="services animate-box">
@@ -410,7 +409,7 @@
 																	</li>
 																</ul>
 															</li>
-															<li><span class="b-title">Jquery(Ajax)</span>
+															<li><span class="b-title">Jquery(AJAX)</span>
 																<ul>
 																	<li><span class="s-title">사용한 이유</span>
 																		<div>- 중복된 데이터 입력을 실시간으로 확인하여 방지하기 위해</div>
@@ -433,24 +432,14 @@
 														<button onclick="document.getElementById('homi04').style.display='block'" class="w3-button w3-purple w3-tiny">주문 상태</button>
 														<br><br><br>
 														<ol>
-															<li><span class="b-title">DB설계</span>
-																<ul>
-																	<li><span class="s-title">외래키 제약조건</span>
-																		<div>- 각 테이블 간의 연관성을 고려하여 외래 키 관계와 제약 조건(연쇄 삭제, 변경, No 액션)을 설정</div>
-																	</li>
-																	<li><span class="s-title">View</span>
-																		<div>- 조인한 결과를 view로 생성하여 쿼리문 간소화</div>
-																	</li>
-																</ul>
-															</li>
 															<li><span class="b-title">관리자 페이지</span>
 																<ul>
-																	<li><span class="s-title">메인 페이지(Ajax)</span>
+																	<li><span class="s-title">메인 페이지(AJAX)</span>
 																		<div>- 오늘 날짜를 기준으로 주문 상태에 따른 건 수를 가져와서 JSON 객체로 반환하여 표시함</div>
 																		<div>- 최근 7일간의 매출 금액, 취소 금액, 환불 금액 및 해당 건 수를 가져와서 JSON 객체로 반환 후, 차트와 테이블로 표시함</div>
 																	</li>
 																	<li><span class="s-title">페이징 및 검색</span>
-																		<div>- 페이징 알고리즘을 사용 (이전 : -1, 다음 : +5)</div>
+																		<div>- 모든 관리 목록 페이지에서 페이징 알고리즘을 사용 (이전 : -1, 다음 : +5)</div>
 																		<div>- 검색 기능과 필터링은 마이바티스 동적 쿼리를 사용</div>
 																	</li>
 																	<li><span class="s-title">(다중) 이미지 파일 업로드</span>
@@ -458,7 +447,7 @@
 																		<div>- DTO Setter 메서드에서 파일명들을 콤마(,)를 구분자로 하여 문자열로 저장</div>
 																		<div>- CK에디터를 사용하여 상세설명 이미지 업로드</div>
 																	</li>
-																	<li><span class="s-title">@Transactional 어노테이션을 사용한 트랜잭션 처리 (Ajax)</span>
+																	<li><span class="s-title">@Transactional 어노테이션을 사용한 트랜잭션 처리 (AJAX)</span>
 																		<div>- 포인트 지급 : 1. 회원 포인트 update 2. 지급 내역 insert 3. 지급 상태 update</div>
 																		<div>- 입고 수정 : 1. 제품 수량 update 2. 입고 내역 update</div>
 																	</li>
@@ -468,8 +457,8 @@
 																	<li><span class="s-title">날짜 범위검색을 통한 매출 파악</span>
 																		<div>- 리스트에서 주문 상태와 환불 상태 금액의 합을 구하고, 범위 내의 일수로 나누어 평균을 계산함</div>
 																	</li>
-																	<li><span class="s-title">FAQ게시판 (Ajax)</span>
-																		<div>- RESTful API를 구현하여 CRUD 기능을 하나의 .jsp 파일에 Ajax를 사용하여 처리</div>
+																	<li><span class="s-title">FAQ게시판 (AJAX)</span>
+																		<div>- RESTful API를 구현하여 CRUD 기능을 하나의 .jsp 파일에 AJAX를 사용하여 처리</div>
 																	</li>
 																</ul>
 															</li>
@@ -477,10 +466,37 @@
 													</td>
 												</tr>
 												<tr>
-													<th colspan="2">문제 해결 과정</th>
+													<th colspan="2">문제 발생과 해결 과정</th>
 												</tr>
 												<tr>
-													<td colspan="2">쓸 예정</td>
+													<td colspan="2">
+														<ol>
+															<li><span class="b-title">AJAX를 사용한 주문상태 변경</span>
+																<ul>
+																	<li><span class="s-title">문제</span>
+																		<div>- 상태 변경 버튼을 누르면 DB의 데이터는 변경되지만, View 페이지에서는 데이터가 공백으로 보이거나 해당 상태의 카테고리로 이동하지 않는 문제가 발생</div>
+																	</li>
+																	<li><span class="s-title">해결</span>
+																		<div>- 변경된 POST 요청이 성공한 후에 상태 리스트를 호출하는 함수가 없었기 때문에, 로드 함수를 분리하여 개별적인 함수를 만듦</div>
+																		<div>- 해당 상태의 카테고리로 이동하기 위해 location.reload() 함수를 사용</div>
+																	</li>
+																</ul>
+															</li>
+															<li><span class="b-title">다중 이미지 파일 수정</span>
+																<ul>
+																	<li><span class="s-title">문제</span>
+																		<div>- 제품 수정 폼으로 이동한 후 아무 작업을 하지 않고 수정을 위해 POST 요청을 보냈을 때, 제품 상세 이미지가 사라지고 데이터베이스(DB)에는 공백이 들어가는 문제가 발생</div>
+																	</li>
+																	<li><span class="s-title">문제점 발견</span>
+																		<div>- 히든 태그에 이미지 파일 이름을 콤마(,)로 구분한 문자열로 저장했으나, POST 요청 시 다중 파일 입력태그가 null 값으로 전송되어 setter 메서드에서 공백으로 설정되어 업데이트되는 문제점을 발견</div>
+																	</li>
+																	<li><span class="s-title">해결</span>
+																		<div>- 컨트롤러에서 히든 태그의 값을 다시 별도로 받아와, 다중 파일 입력태그의 값이 null일 때 원래의 값을 설정하기 위해 set 메서드를 사용하여 업데이트</div>
+																	</li>
+																</ul>
+															</li>
+														</ol>
+													</td>
 												</tr>
 											</table>
 										</div>
@@ -541,61 +557,95 @@
 													</td>
 												</tr>
 												<tr>
+													<th colspan="2">사용기술</th>
+												</tr>
+												<tr>
+													<td colspan="2">
+														<ol>
+															<li><span class="b-title">Jquery(AJAX)</span>
+																<ul>
+																	<li><span class="s-title">사용한 이유</span>
+																		<div>- 추천 : 사용자가 게시물을 추천할 때, 페이지 전체를 새로고침하지 않고 추천 카운트를 업데이트하고 싶었기 때문</div>
+																		<div>- 댓글 페이징 : 많은 댓글이 있는 게시물의 페이지 로딩 속도를 개선하기 위해 동적으로 댓글 목록을 로드하기 위함</div>
+																	</li>
+																</ul>
+															</li>
+															<li><span class="b-title">크롤링</span>
+																<ul>
+																	<li><span class="s-title">사용한 이유</span>
+																		<div>- 특정 웹사이트에서 발매되는 상품 정보를 실시간으로 모니터링하고자 크롤링 기술을 사용하였음</div>
+																	</li>
+																</ul>
+															</li>
+														</ol>
+													</td>
+												</tr>
+												<tr>
 													<th colspan="2">담당 업무</th>
 												</tr>
 												<tr>
 													<td colspan="2">
-														담당 업무 : DB설계, 관리자 페이지(전체), 사용자 페이지(고객센터, 챌린지 이벤트)<br>
+														담당 업무 : DB설계, 전체 페이지 디자인, 커뮤니티 게시판, 댓글, 크롤링<br>
 														<button onclick="document.getElementById('shoe02').style.display='block'" class="w3-button w3-purple w3-tiny">게시글 상세</button>
 														<button onclick="document.getElementById('shoe03').style.display='block'" class="w3-button w3-purple w3-tiny">댓글 목록</button>
 														<button onclick="document.getElementById('shoe04').style.display='block'" class="w3-button w3-purple w3-tiny">발매 목록</button>
 														<br><br><br>
 														<ol>
-															<li><span class="b-title">DB설계</span>
-																<ul>
-																	<li><span class="s-title">외래키 제약조건</span>
-																		<div>- 각 테이블 간의 연관성을 고려하여 외래 키 관계와 제약 조건(연쇄 삭제, 변경)을 설정</div>
-																	</li>
-																</ul>
-															</li>
 															<li><span class="b-title">게시판</span>
 																<ul>
-																	<li><span class="s-title">게시글 리스트</span>
-																		<div>- 회원 테이블과 댓글 테이블을 조인하여 작성자에 프로필사진과 게시글 제목에 댓글 수를 표시하였습니다.</div>
-																		<div>- jstl 조건문을 사용하여 제목이 길었을 때, 사진 첨부 여부, 인기 게시물 여부, 오늘 작성한 글인지 체크하여 그에 맞는 UI를 구현하였습니다.</div>
-																		<div>- 후기게시판의 경우 컨트롤러에서 img태그의 src값을 정규식으로 추출하여 썸네일로 이용하였습니다. 사진 개수도 체크하여 게시글의 몇 장의 사진이 있는지도 표기하였습니다.</div>
-																	</li>
-																	<li><span class="s-title">MyBatis 동적쿼리를 이용해 게시글 필터링</span>
-																		<div>- 인기 글과 전체 글을 구분하여 볼 수 있게 구현하였습니다.</div>
-																		<div>- 제목+내용 또는 작성자로 검색할 수 있게 구현하였습니다.</div>
-																		<div>- 페이지 번호를 파라미터로 넘겨서 페이지에 맞는 게시글들이 나오도록 구현하였습니다.</div>
+																	<li><span class="s-title">페이징 및 검색</span>
+																		<div>- 모든 목록 페이지에서 페이징 알고리즘을 사용 (이전 : -1, 다음 : +5)</div>
+																		<div>- 검색 기능과 필터링은 마이바티스 동적 쿼리를 사용</div>
 																	</li>
 																	<li><span class="s-title">게시글 공개/비공개</span>
-																		<div>- 게시글 각각의 체크박스를 만들고, jstl c:set 변수에 게시글 번호를 반복문을 돌면서 추가하여 체크된 게시물 번호만 컨트롤러에서 넘겨 db에서 공개 여부 값을 참으로 만들어 처리하였습니다.</div>
+																		<div>1. 히든 태그에 해당 페이지 게시물 목록 번호를 공백을 기준으로 하여 저장</div>
+																		<div>2. POST 요청으로 히든 태그 값과 체크된 게시물 번호를 서버로 전송</div>
+																		<div>3. 전체 게시물 번호와 체크된 게시물 번호를 공백을 기준으로 split하여 List에 저장</div>
+																		<div>4. removeAll 메서드를 사용하여 체크되지 않은 게시물 번호의 List를 구한 후 update</div>
+																	</li>
+																	<li><span class="s-title">이전/다음글</span>
+																		<div>- 서브쿼리를 사용하여 현재 게시물 번호의 다음글/이전글 번호를 가져와 href 링크로 설정함</div>
 																	</li>
 																	<li><span class="s-title">게시글 추천</span>
-																		<div>- 회원만 추천 가능하게 조건설정을 하였고, 추천 버튼을 누르면 ajax를 이용하여 게시물 번호와 회원의 닉네임을 파라미터로 받아 추천 테이블로 insert 하였고, board 테이블의 추천 수는 1이 오르도록 update 하였습니다.</div>
-																	</li>
-																</ul>
-															</li>
-															<li><span class="b-title">댓글</span>
-																<ul>
-																	<li><span class="s-title">댓글 작성폼/대댓글 작성폼</span>
-																		<div>- 회원만 작성 가능하며, 현재 로그인한 회원의 닉네임과 프로필 사진이 댓글 작성폼에 보이게 구현하였습니다.</div>
-																		<div>- 댓글마다 댓글 작성 폼을 만들어 숨겨놓고 대 댓글 작성 버튼을 누르면 해당 폼이 밑으로 보이게 구현하였습니다.</div>
+																		<div>- AJAX를 사용하여 게시물 번호와 회원의 닉네임을 파라미터로 받아와 추천 테이블에 insert</div>
+																		<div>- AJAX를 사용하여 페이지 로드 시, 해당 게시물을 추천한 회원의 경우 추천 버튼이 활성화</div>
 																	</li>
 																	<li><span class="s-title">댓글작성/댓글추천</span>
-																		<div>- 댓글작성과 추천시 ajax를 페이지번호와 기타 파라미터값을 받아서 db에 등록 후 페이지 이동없이 본인이 작성한 위치에서 바로 보이게 구현하였습니다.</div>
+																		<div>- 댓글 작성과 추천 시 AJAX를 사용하여 페이지 이동 없이 본인이 작성한 위치에서 바로 보이게 하였음</div>
 																	</li>
 																</ul>
 															</li>
 															<li><span class="b-title">발매정보/발매소식</span>
 																<ul>
 																	<li><span class="s-title">jsoup 크롤링</span>
-																		<div>- '럭키드로우'라는 실시간 발매정보 홈페이지를 크롤링하여 이용자에게 필요한 정보의 태그와 클래스 명을 크롤링하여 객체에 저장하고 모델을 만들어 view쪽으로 넘겨서 구현하였습니다.</div>
+																		<div>- '럭키드로우'라는 실시간 발매정보 홈페이지를 크롤링하여 필요한 정보의 태그와 클래스명을 파싱하여 객체에 저장</div>
 																	</li>
 																	<li><span class="s-title">검색</span>
-																		<div>- 크롤링하는 과정에서 String 참조변수의 contains 메서드를 이용하여 제목과 발매처를 파라미터로 받아 필터링하였습니다.</div>
+																		<div>- 크롤링하는 과정에서 String 변수의 contains 메서드를 사용하여 제목과 발매처를 파라미터로 받아 필터링</div>
+																	</li>
+																</ul>
+															</li>
+														</ol>
+													</td>
+												</tr>
+												<tr>
+													<th colspan="2">문제 발생과 해결 과정</th>
+												</tr>
+												<tr>
+													<td colspan="2">
+														<ol>
+															<li><span class="b-title">첫번째 댓글 작성</span>
+																<ul>
+																	<li><span class="s-title">문제</span>
+																		<div>- 모든 게시물의 첫번째 댓글 작성 시 그 댓글은 보이지 않고 두 번째 댓글 작성 부터 보이는 현상</div>
+																	</li>
+																	<li><span class="s-title">문제점 발견</span>
+																		<div>- 댓글 작성 시 댓글 목록을 날짜 오름차순으로 정렬하여 맨 뒷페이지로 작성한 댓글을 빠르게 확인할 수 있도록 구현 하였음</div>
+																		<div>- 이를 위해 히든 태그에 젤 마지막 페이지 번호를 저장하고, AJAX를 사용하여 목록 페이지를 마지막 페이지로 이동 시켰음 </div>
+																		<div>- 그러나 페이징 알고리즘에서 첫 번째 댓글을 작성하기 전에 댓글 개수가 0이므로 페이지 번호가 0이 되어 쿼리문에서 null이 되어 아무 내용도 보이지 않게 됨</div>
+																	</li>
+																	<li><span class="s-title">해결</span>
+																		<div>- A댓글 작성 요청을 AJAX로 보내고, 마지막 페이지 번호의 히든 태그 ID 값이 0인 경우 1로 설정하여 문제를 해결하였음</div>
 																	</li>
 																</ul>
 															</li>
