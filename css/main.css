@@ -577,6 +577,11 @@ ul.icons a {
     .header-left {
         margin-top: 0px
     }
+
+    .brand-img {
+        display: flex;
+        justify-content: center;    
+    }
 }
 
 .profile-img {
