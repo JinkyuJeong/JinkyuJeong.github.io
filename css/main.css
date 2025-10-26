@@ -475,6 +475,16 @@ ul {
     text-align: justify
 }
 
+ul ul {
+  padding-left: 10px; /* 절반 들여쓰기 */
+  list-style-type: "■ "; /* li 앞에 붙일 사용자 정의 기호 */
+}
+
+ul ul li::marker {
+  color: #555; /* 기호 색상 (선택사항) */
+  font-weight: bold; /* 기호 굵기 조정 가능 */
+}
+
 a i {
     font-size: 1.6rem
 }
