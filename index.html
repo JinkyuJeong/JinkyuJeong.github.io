@@ -94,8 +94,9 @@
               <p>
 				세일즈포스 개발 입문 이후 APEX와 LWC를 기반으로 여러 사이트 구축 업무를 수행했습니다.
 				<br>
-				주로 <strong>트리거·배치 로직 구현, 인터페이스 연동, 소스 구조의 표준화·공통화</strong>를 담당했으며, 
-				Copado를 활용한 CI/CD 환경에서 담당 영역을 배포했습니다.
+				주로 <strong>고객사 시스템 분석, 트리거·배치 로직 구현, 인터페이스 연동, 소스 구조의 표준화·공통화</strong>를 담당했으며,
+                <br>
+				Copado 및 Salesforce CLI를 활용한 CI/CD 환경에서 담당 영역을 배포했습니다.
 				<br>
 				표준화된 구조와 가독성 높은 코드를 추구하는 편이며, 팀의 생산성과 품질 향상을 중요하게 생각합니다.
 				<br>
@@ -112,7 +113,7 @@
           <div class="row clearfix layout layout-left">
             <div class="col-xs-12 col-sm-4 col-md-3 col-print-12 details">
               <h4>(주)DKBMC</h4>
-              <p>2023.08 ~ 재직중</p>
+              <p>2023.08 ~ 2025.11</p>
             </div>
             <div class="col-xs-12 col-sm-8 col-md-9 col-print-12">
               <ul>
@@ -121,20 +122,158 @@
               </ul>
             </div>
           </div>
+
+          <div class="row clearfix layout layout-left">
+            <div class="col-xs-12 col-sm-4 col-md-3 col-print-12 details">
+              <h4>(주)솔로몬텍</h4>
+              <p>2026.02 ~ 재직중</p>
+            </div>
+            <div class="col-xs-12 col-sm-8 col-md-9 col-print-12">
+              <ul>
+                <li>직급 : 책임</li>
+                <li>직무 : 세일즈포스 개발자</li>
+              </ul>
+            </div>
+          </div>
+          
         </div>
 
 		    <!-- Projects -->
         <div class="container experience-container">
           <h3>Projects</h3>
+
+          <div class="row clearfix layout layout-left">
+            <div class="col-xs-12 col-sm-4 col-md-3 col-print-12 details">
+              <div class="brand-img">
+                <img src="/images/posco_logo.png" style="width: 220px; height: 70px;">
+              </div>
+              <h4>포스코그룹 IP 플랫폼 <br> 구축 2차</h4>
+              <p><b>SF Interface Developer</b></p>
+              <p>2026.09 ~ 2027.01 (5개월, 진행중)</p>
+            </div>
+            <div class="col-xs-12 col-sm-8 col-md-9 col-print-12">
+              <p class="quote">
+                포스코그룹(포스코, RIST, 퓨처엠, 포스코엠텍, 스틸리온) IP 플랫폼 구축 프로젝트
+              </p>
+              <ul>
+                <li><strong>인원</strong> : 약 9명</li>
+                <li><strong>담당 업무</strong> : 인터페이스 개발</li>
+                <li><strong>업무 내용</strong> :
+                  <ul>
+                    <li>포스코, RIST ASIS 소스 (Spring 기반 포스코 Glue 프레임워크), SQL 분석</li>
+                    <li>
+                        포스코 ASIS 비용자산 모듈 TOBE APEX로 변환
+                        <br> &nbsp; → MyBatis 다중 루프 DML을 Bulk DML로 개선
+                        <br> &nbsp; → ASIS 시스템 로직 오류를 TOBE에서 해소
+                        <br> &nbsp; → Governor Limit(Heap, CPU Time) 대응 비동기 처리, Platform Event로 화면 스피너 상태 제어
+                        <br> &nbsp; → ASIS Multi Datasource 조회 로직을 중계 DB 연동 방식으로 전환
+                    </li>
+                    <li>
+                      RIST ASIS 발명 데이터 TOBE 업무 오브젝트 이관 및 이행
+                      <br> &nbsp; → 중계서버(포스코 클라우드)-RIST DB 연동, SFDC Request-Response 동기/비동기 트랜잭션으로 데이터 CRU 처리
+                      <br> &nbsp; → 포스코, 홀딩스 ASIS Oracle 프로시저를 APEX 배치로 전환
+                      <br> &nbsp; → 포스코, 홀딩스 ASIS NAS에 저장된 RIST 파일을 인터페이스를 통해 공통 DRM 적용 후 포스코 클라우드를 통해 TOBE NAS 저장
+                      <br> &nbsp; → 이행 버튼 1회로 파일 이행 Queueable + ETL 3단계 체인 배치 수행 후 Platform Event로 화면 스피너 상태 제어
+                    </li>
+                    <li>
+                      그룹사별 메일 이력 데이터 용량 이슈로 중계 DB 테이블 분리 설계
+                      <br> &nbsp; → 발신자 소속 그룹사 기준 CRUD API 분기 처리로 그룹사별 테이블 적재
+                    </li>
+                    <li>포스코 ASIS 테이블 TOBE 커스텀 오브젝트로 이관 후 마이그 ETL APEX 배치로 업무 오브젝트 이행 (메일, 첨부파일, 비용 등)</li>
+                    <li>온프레미스 Bitbucket GIT 형상관리 (PR 검수 및 SFDC 소스 Merge)</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="row clearfix layout layout-left">
+            <div class="col-xs-12 col-sm-4 col-md-3 col-print-12 details">
+              <div class="brand-img">
+                <img src="/images/holdings_logo.jpg" style="width: 220px; height: 70px;">
+              </div>
+              <h4>포스코그룹(홀딩스) IP 플랫폼 <br> 구축 1차</h4>
+              <p><b>SF Interface Developer</b></p>
+              <p>2026.04 ~ 2026.08 (5개월, 중도 투입)</p>
+            </div>
+            <div class="col-xs-12 col-sm-8 col-md-9 col-print-12">
+              <p class="quote">
+                포스코그룹(홀딩스) IP 플랫폼 구축 프로젝트
+              </p>
+              <ul>
+                <li><strong>인원</strong> : 약 11명</li>
+                <li><strong>담당 업무</strong> : 인터페이스 개발</li>
+                <li><strong>업무 내용</strong> :
+                  <ul>
+                    <li>홀딩스 ASIS 소스 (Spring 기반 포스코 Glue 프레임워크), SQL 분석</li>
+                    <li>
+                      홀딩스 ASIS 비용자산 모듈 TOBE APEX로 변환
+                      <br> &nbsp; → MyBatis 다중 루프 DML을 Bulk DML로 개선
+                      <br> &nbsp; → ASIS 시스템 로직 오류를 TOBE에서 해소
+                      <br> &nbsp; → Governor Limit(Heap, CPU Time) 대응 비동기 처리, Platform Event로 화면 스피너 상태 제어
+                      <br> &nbsp; → ASIS 13종 테이블 조인 정산 데이터를 Governor Limit을 우회하여 4회 분할 호출(Apex-LWC)로 집계해 현업용 엑셀 다운로드 구현
+                      <br> &nbsp; → ASIS Multi Datasource 조회 로직을 중계 DB 연동 방식으로 전환
+                    </li>
+                    <li>
+                      이메일 인터페이스 개발 (공통 모듈)
+                      <br> &nbsp; → 이메일: Heap Limit 우회 비동기 발송, Platform Event로 화면 스피너 상태 제어
+                    </li>
+                    <li>
+                      로컬 첨부파일 인터페이스 개발 (공통 모듈)
+                      <br> &nbsp; → 보안 이슈로 인하여 LWC-중계서버 간 JWT 인증 후 1회성 URL 발급 방식으로 업/다운로드 구현
+                    </li>
+                    <li>
+                      ECM 첨부파일 인터페이스 개발 (공통 모듈)
+                      <br> &nbsp; → EP ECM 팝업을 SFDC에 띄워 파일을 선택 후 웹훅 Inbound로 문서 ID를 스크립트단 저장
+                      <br> &nbsp; → API를 호출하여 ECM 파일을 중계서버로 가져온 후 홀딩스 DRM 복호화 → 공통 DRM 암호화 → 포스코 클라우드를 통해 TOBE NAS 저장
+                    </li>
+                    <li>
+                      NAS에 저장되어 있는 포스코 그룹사 공통 DRM이 적용된 파일 권한 제어
+                      <br> &nbsp; → 포스코 EP와 Fasoo 간 연동으로 문서를 열람 시 SFDC로 클라이언트 정보 Inbound되어 내부 로직으로 권한 제어
+                    </li>
+                    <li>홀딩스 ASIS 테이블 TOBE 커스텀 오브젝트로 이관 후 마이그 ETL APEX 배치로 업무 오브젝트 이행 (메일, 첨부파일, 비용 등)</li>
+                    <li>인터페이스 API 로그 현황 리포트/대시보드 및 커스텀 화면 개발</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="row clearfix layout layout-left">
+            <div class="col-xs-12 col-sm-4 col-md-3 col-print-12 details">
+              <div class="brand-img">
+                <img src="/images/worksmate_logo.png" style="width: 220px; height: 40px;">
+              </div>
+              <h4>웍스메이트 통합 구축</h4>
+              <p><b>SF Interface Developer</b></p>
+              <p>2026.02 ~ 2026.04 (2개월)</p>
+            </div>
+            <div class="col-xs-12 col-sm-8 col-md-9 col-print-12">
+              <p class="quote">
+                웍스메이트 세일즈포스 통합 구축 프로젝트
+              </p>
+              <ul>
+                <li><strong>인원</strong> : 약 3명</li>
+                <li><strong>담당 업무</strong> : 인터페이스 개발</li>
+                <li><strong>업무 내용</strong> :
+                  <ul>
+                    <li>외부 API 연동을 위한 APEX 공통 모듈 개발 (로직 표준화, 요청/응답/에러 로깅)</li>
+                    <li>마이그레이션 이관 데이터 인바운드 APEX 개발</li>
+                    <li>이관 데이터 업무 오브젝트 이행 ETL 개발 및 검증</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
     
           <div class="row clearfix layout layout-left">
             <div class="col-xs-12 col-sm-4 col-md-3 col-print-12 details">
               <div class="brand-img">
-                <img src="/images/kyochon_logo.png" style="width: 200px; height: 40px;">
+                <img src="/images/kyochon_logo.png" style="width: 270px; height: 60px;">
               </div>
               <h4>교촌 F&B 통합 구축 <br> 1차</h4>
               <p><b>SF Interface Developer</b></p>
-              <p>2025.08 ~ 2025.12 (5개월, 10월 말 인수인계)</p>
+              <p>2025.08 ~ 2025.10 (3개월, 10월 말 인수인계)</p>
             </div>
             <div class="col-xs-12 col-sm-8 col-md-9 col-print-12">
               <p class="quote">
@@ -167,7 +306,6 @@
                 <img src="/images/nexen_logo.jpg" style="width: 200px; height: 50px;">
               </div>
               <h4>넥센타이어 디지털 CRM <br> 2차 확산</h4>
-              <a href="https://www.nexentire-dealer.com/" target="_blank" class="link">https://www.nexentire-dealer.com/</a>
               <p><b>SF Platform Developer</b></p>
               <p>2025.02 ~ 2025.07 (5.5개월)</p>
             </div>
@@ -269,7 +407,7 @@
               </div>
               <h4>넥센타이어 디지털 CRM <br> 1차 구축</h4>
               <p><b>SF Platform Developer</b></p>
-              <p>2023.11 ~ 2023.03 (4.5개월)</p>
+              <p>2023.11 ~ 2024.03 (4.5개월)</p>
             </div>
             <div class="col-xs-12 col-sm-8 col-md-9 col-print-12">
               <p class="quote">SAP 시스템과 세일즈포스 간의 통합 기반을 구축한 글로벌 CRM 플랫폼 1차 프로젝트 (독일)</p>
