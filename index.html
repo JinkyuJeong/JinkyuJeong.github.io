@@ -147,67 +147,23 @@
               <div class="brand-img">
                 <img src="/images/posco_logo.png" style="width: 220px; height: 70px;">
               </div>
-              <h4>포스코그룹 IP 플랫폼 <br> 구축 2차</h4>
+              <h4>포스코그룹 IP 플랫폼 <br> 구축 및 확산</h4>
               <p><b>SF Interface Developer</b></p>
-              <p>2026.09 ~ 2027.01 (5개월, 진행중)</p>
+              <p>2026.04 ~ 2027.01 (10개월, 4월 중도 투입, 진행중)</p>
             </div>
             <div class="col-xs-12 col-sm-8 col-md-9 col-print-12">
               <p class="quote">
                 포스코그룹(포스코, RIST, 퓨처엠, 포스코엠텍, 스틸리온) IP 플랫폼 구축 프로젝트
               </p>
               <ul>
-                <li><strong>인원</strong> : 약 9명</li>
-                <li><strong>담당 업무</strong> : 인터페이스 개발</li>
-                <li><strong>업무 내용</strong> :
-                  <ul>
-                    <li>포스코, RIST ASIS 소스 (Spring 기반 포스코 Glue 프레임워크), SQL 분석</li>
-                    <li>
-                        포스코 ASIS 비용자산 모듈 TOBE APEX로 변환
-                        <br> &nbsp; → MyBatis 다중 루프 DML을 Bulk DML로 개선
-                        <br> &nbsp; → ASIS 시스템 로직 오류를 TOBE에서 해소
-                        <br> &nbsp; → Governor Limit(Heap, CPU Time) 대응 비동기 처리, Platform Event로 화면 스피너 상태 제어
-                        <br> &nbsp; → ASIS Multi Datasource 조회 로직을 중계 DB 연동 방식으로 전환
-                    </li>
-                    <li>
-                      RIST ASIS 발명 데이터 TOBE 업무 오브젝트 이관 및 이행
-                      <br> &nbsp; → 중계서버(포스코 클라우드)-RIST DB 연동, SFDC Request-Response 동기/비동기 트랜잭션으로 데이터 CRU 처리
-                      <br> &nbsp; → 포스코, 홀딩스 ASIS Oracle 프로시저를 APEX 배치로 전환
-                      <br> &nbsp; → 포스코, 홀딩스 ASIS NAS에 저장된 RIST 파일을 인터페이스를 통해 공통 DRM 적용 후 포스코 클라우드를 통해 TOBE NAS 저장
-                      <br> &nbsp; → 이행 버튼 1회로 파일 이행 Queueable + ETL 3단계 체인 배치 수행 후 Platform Event로 화면 스피너 상태 제어
-                    </li>
-                    <li>
-                      그룹사별 메일 이력 데이터 용량 이슈로 중계 DB 테이블 분리 설계
-                      <br> &nbsp; → 발신자 소속 그룹사 기준 CRUD API 분기 처리로 그룹사별 테이블 적재
-                    </li>
-                    <li>포스코 ASIS 테이블 TOBE 커스텀 오브젝트로 이관 후 마이그 ETL APEX 배치로 업무 오브젝트 이행 (메일, 첨부파일, 비용 등)</li>
-                    <li>온프레미스 Bitbucket GIT 형상관리 (PR 검수 및 SFDC 소스 Merge)</li>
-                  </ul>
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="row clearfix layout layout-left">
-            <div class="col-xs-12 col-sm-4 col-md-3 col-print-12 details">
-              <div class="brand-img">
-                <img src="/images/holdings_logo.jpg" style="width: 220px; height: 70px;">
-              </div>
-              <h4>포스코그룹(홀딩스) IP 플랫폼 <br> 구축 1차</h4>
-              <p><b>SF Interface Developer</b></p>
-              <p>2026.04 ~ 2026.08 (5개월, 중도 투입)</p>
-            </div>
-            <div class="col-xs-12 col-sm-8 col-md-9 col-print-12">
-              <p class="quote">
-                포스코그룹(홀딩스) IP 플랫폼 구축 프로젝트
-              </p>
-              <ul>
                 <li><strong>인원</strong> : 약 11명</li>
                 <li><strong>담당 업무</strong> : 인터페이스 개발</li>
                 <li><strong>업무 내용</strong> :
                   <ul>
-                    <li>홀딩스 ASIS 소스 (Spring 기반 포스코 Glue 프레임워크), SQL 분석</li>
+                    <li>ASIS 소스 (Spring 기반 포스코 Glue 프레임워크), SQL 분석</li>
+                    <li>ASIS 테이블 TOBE 커스텀 오브젝트로 이관 후 마이그 ETL APEX 배치로 업무 오브젝트 이행</li>
                     <li>
-                      홀딩스 ASIS 비용자산 모듈 TOBE APEX로 변환
+                      ASIS 비용자산 모듈 TOBE APEX로 변환
                       <br> &nbsp; → MyBatis 다중 루프 DML을 Bulk DML로 개선
                       <br> &nbsp; → ASIS 시스템 로직 오류를 TOBE에서 해소
                       <br> &nbsp; → Governor Limit(Heap, CPU Time) 대응 비동기 처리, Platform Event로 화면 스피너 상태 제어
@@ -225,13 +181,20 @@
                     <li>
                       ECM 첨부파일 인터페이스 개발 (공통 모듈)
                       <br> &nbsp; → EP ECM 팝업을 SFDC에 띄워 파일을 선택 후 웹훅 Inbound로 문서 ID를 스크립트단 저장
-                      <br> &nbsp; → API를 호출하여 ECM 파일을 중계서버로 가져온 후 홀딩스 DRM 복호화 → 공통 DRM 암호화 → 포스코 클라우드를 통해 TOBE NAS 저장
+                      <br> &nbsp; → API를 호출하여 ECM 파일을 중계서버로 가져온 후 DRM 복호화 → 공통 DRM 암호화 → TOBE NAS 저장
                     </li>
                     <li>
                       NAS에 저장되어 있는 포스코 그룹사 공통 DRM이 적용된 파일 권한 제어
                       <br> &nbsp; → 포스코 EP와 Fasoo 간 연동으로 문서를 열람 시 SFDC로 클라이언트 정보 Inbound되어 내부 로직으로 권한 제어
                     </li>
-                    <li>홀딩스 ASIS 테이블 TOBE 커스텀 오브젝트로 이관 후 마이그 ETL APEX 배치로 업무 오브젝트 이행 (메일, 첨부파일, 비용 등)</li>
+                    <li>
+                      RIST ASIS 발명 데이터 TOBE 업무 오브젝트 이관 및 이행
+                      <br> &nbsp; → 포스코 클라우드 서버-RIST DB 연동 후 데이터 실시간 Callout
+                      <br> &nbsp; → ASIS Oracle 프로시저를 SFDC APEX 배치로 전환
+                      <br> &nbsp; → ASIS NAS에 저장된 RIST 파일을 인터페이스를 통해 복호화 후 공통 DRM 적용하여 TOBE NAS 저장
+                      <br> &nbsp; → 이행 버튼 1회로 파일 이행 Queueable + ETL 3단계 체인 배치 수행 후 Platform Event로 화면 스피너 상태 제어
+                    </li>
+                    <li>온프레미스 Bitbucket GIT 형상관리 (PR 검수 및 SFDC 소스 Merge)</li>
                     <li>인터페이스 API 로그 현황 리포트/대시보드 및 커스텀 화면 개발</li>
                   </ul>
                 </li>
@@ -257,8 +220,8 @@
                 <li><strong>담당 업무</strong> : 인터페이스 개발</li>
                 <li><strong>업무 내용</strong> :
                   <ul>
-                    <li>외부 API 연동을 위한 APEX 공통 모듈 개발 (로직 표준화, 요청/응답/에러 로깅)</li>
-                    <li>마이그레이션 이관 데이터 인바운드 APEX 개발</li>
+                    <li>외부 API 연동을 위한 APEX 공통 모듈 개발 및 Org 세팅 (로직 표준화, 요청/응답/에러 로깅)</li>
+                    <li>마이그레이션 이관 데이터 인바운드 APEX Batch, Queueable 개발</li>
                     <li>이관 데이터 업무 오브젝트 이행 ETL 개발 및 검증</li>
                   </ul>
                 </li>
@@ -281,18 +244,18 @@
               </p>
               <ul>
                 <li><strong>인원</strong> : 약 8명</li>
-                <li><strong>담당 업무</strong> : 인터페이스 메인 / 내부 CRM 전자 문서 개발</li>
+                <li><strong>담당 업무</strong> : 인터페이스 개발</li>
                 <li><strong>업무 내용</strong> :
                   <ul>
-                    <li>솔루션·레거시 시스템과 송·수신을 위한 세일즈포스 Org 환경 구성 및 설정</li>
-                    <li>전자문서, 전자결재(그룹웨어), 알림톡, 인사·조직 등 인터페이스 아키텍처 설계 및 개발</li>
+                    <li>외부 API 연동을 위한 APEX 공통 모듈 개발 및 Org 세팅 (로직 표준화, 요청/응답/에러 로깅)</li>
+                    <li>전자문서, 전자결재(그룹웨어), 알림톡, 인사·조직 등의 REST API 개발</li>
                     <li>
-                      전자문서 솔루션 특성에 맞춰 Queueable Chain 기반 다단계 인터페이스 구조로 개선
-                      <br> &nbsp; → DML 이후 Callout 예외 발생 문제 해소
+                      전자문서 솔루션 시퀀스에 맞춰진 Queueable Chain 기반 개발
+                      <br> &nbsp; → DML 이후 Callout 예외 발생 문제 해결
                     </li>
                     <li>
-                      Webhook Guest 접근 보안 문제를 MuleSoft Flow + OAuth 2.0 기반 구조로 개선 제안
-                      <br> &nbsp; → 게스트 사용자용 오브젝트/필드 권한 설정 공수 100% 절감, 보안성 강화 및 사이트 설정 불필요
+                      미들웨어(MuleSoft)를 통한 Webhook Guest 접근 보안 문제 개선 제안
+                      <br> &nbsp; → Guest용 오브젝트/필드 권한 설정 공수 100% 절감
                     </li>
                   </ul>
                 </li>
@@ -315,20 +278,17 @@
               </p>
               <ul>
                 <li><strong>인원</strong> : 약 20명</li>
-                <li><strong>담당 업무</strong> : 내부 CRM 주문·배송 메인 / 주간 보고서 개발</li>
+                <li><strong>담당 업무</strong> : 내부 CRM 개발</li>
                 <li><strong>업무 내용</strong> :  
                   <ul>
                     <li>신규 인터페이스 추가 개발에 따른 화면 대응 기능 구현</li>
-                    <li>Tableau 대시보드 리다이렉션용 URL 분기 처리 모듈 개발 (사용자 권한·권역별 대시보드 필터 값 매핑)</li>
-                    <li>북미 딜러포탈 벌크 주문 완료 알림 기능 개발</li>
+                    <li>북미 Exp. 포탈 벌크 주문 완료 알림 기능 개발</li>
+                    <li>Tableau 대시보드 리다이렉션용 URL 분기 처리 모듈 개발 (사용자 권한/권역별 대시보드 필터 기본값 설정)</li>
                     <li>
-                      지법인별 복잡한 권한 로직을 공통화하고, n개의 라이트닝 페이지를 LWC 탭 컴포넌트 기반 단일 구조로 구현
-                      <br> &nbsp; → 어드민 영역 페이지별 가시성 설정 공수 100% 절감
+                      가시성 설정이 복잡하게 구성된 n개의 라이트닝 페이지를 1개의 LWC 컴포넌트로 구현 (가시성 설정 권한 표준화)
+                      <br> &nbsp; → 어드민 영역의 페이지 설정 공수 90% 절감
                     </li>
-                    <li>
-                      주간 보고서 루틴 관리용 주차 계산 및 트리 공통 모듈 개발
-                      <br> &nbsp; → 고객사 주간 보고서의 주차 산정 로직을 표준화
-                    </li>
+                    <li>주간 보고서 주차 계산 및 트리 공통 모듈 개발 (주차 산정 로직 표준화)</li>
                   </ul>
                 </li>
               </ul>
@@ -348,20 +308,20 @@
               <p class="quote">온프레미스 ERP 전환 대응 개발 프로젝트 (ECC → S/4 HANA)</p>
               <ul>
                 <li><strong>인원</strong> : 약 15명</li>
-                <li><strong>담당 업무</strong> : 내부 CRM SAP 고도화 대응</li>
+                <li><strong>담당 업무</strong> : 내부 CRM 개발</li>
                 <li><strong>업무 내용</strong> :  
                   <ul>
                     <li>
-                      SAP ECC → S/4 HANA 전환에 따라 세일즈포스 APEX 및 LWC 프로그램 대응 변경 및 검증 (약 100여개)
-                      <br> &nbsp; → 자주 사용되는 코드 값을 상수화하여 SAP 전환 시 리플레이스 공수 절감
+                      SAP ECC → S/4 HANA 전환에 따른 세일즈포스 APEX 및 LWC 대응 (소스 약 100여 개)
+                      <br> &nbsp; → 커스텀 오브젝트를 활용한 SAP 코드값 표준화
                     </li>
                     <li>
-                      Tableau 스타일의 LWC 대시보드 필터를 공통 컴포넌트로 개발해 필터링 로직 일관성 향상
-                      <br> &nbsp; → 신규 대시보드 개발 시 필터링 로직 재사용으로 개발 공수 50% 절감
+                      Tableau 스타일로 그려진 CRM LWC 대시보드 공통화
+                      <br> &nbsp; → 신규 대시보드 개발 시 공수 50% 절감
                     </li>
                     <li>
-                      코드 표준화·공통화 작업 수행
-                      <br> &nbsp; → 향후 수평 확산 시 개발 효율성 향상
+                      코드 표준/공통화 작업 수행
+                      <br> &nbsp; → 향후 수평 확산 대응 공수 50% 절감
                     </li>
                   </ul>
                 </li>
@@ -382,18 +342,18 @@
               <p class="quote">글로벌(유럽) 확산 프로젝트</p>
               <ul>
                 <li><strong>인원</strong>: 약 20명</li>
-                <li><strong>담당 업무</strong>: 내부 CRM 주문·배송 메인 개발</li>
+                <li><strong>담당 업무</strong>: 내부 CRM 개발</li>
                 <li><strong>업무 내용</strong> :  
                   <ul>
-                    <li>독일 기준으로 분기 처리되어 있던 소스 구조 개선 및 통합</li>
                     <li>
-                      데이터 조회 시 화면 노출 지연을 페이징 처리 등으로 최적화하여 성능 개선
-                      <br> &nbsp; → 기존 평균 조회 시간 15초에서 5~7초로 단축
-                    </li>
-                    <li>
-                      DB 전환 대비 비즈니스 로직용 SOQL 정리 및 일원화
+                      유럽 확산에 따른 국가별 검증 SOQL 작성
                       <br> &nbsp; → 데이터 검증 시간 2배 단축
                     </li>
+                    <li>
+                      데이터 조회 시 화면 렌더링 시간 개선 (Cursor 기반 페이징)
+                      <br> &nbsp; → 기존 평균 조회 시간 15초에서 5~7초로 단축
+                    </li>
+                    <li>1차 구축 국가 기반으로 되어 있는 로직 표준화</li>
                   </ul>
                 </li>
               </ul>
@@ -413,18 +373,14 @@
               <p class="quote">SAP 시스템과 세일즈포스 간의 통합 기반을 구축한 글로벌 CRM 플랫폼 1차 프로젝트 (독일)</p>
               <ul>
                 <li><strong>인원</strong> : 약 40명</li>
-                <li><strong>담당 업무</strong> : 내부 CRM 주문·배송 파트 서브 개발</li>
+                <li><strong>담당 업무</strong> : 내부 CRM 개발</li>
                 <li><strong>업무 내용</strong> :  
                   <ul>
-                    <li>고객사 데이터 마이그레이션 수행</li>
-                    <li>단위·통합 테스트 수행 및 오픈 가이드 매뉴얼 작성</li>
+                    <li>고객사 데이터 마이그레이션 수행 (인스펙터)</li>
+                    <li>SAP 화면 → SFDC 화면 개발 및 개선</li>
                     <li>
-                      다수 소스에 분산된 엑셀 다운로드 기능 공통화
-                      <br> &nbsp; → 각 컴포넌트당 소스 최소 200라인 이상 감소, 유지보수성 향상
-                    </li>
-                    <li>
-                      테스트 데이터 팩토리 작성
-                      <br> &nbsp; → 테스트 코드 작성 효율화 및 중복 로직 최소화
+                      다수 소스에 분산된 엑셀 다운로드 공통 모듈 개발
+                      <br> &nbsp; → 각 컴포넌트당 소스 최소 200라인 이상 감소
                     </li>
                   </ul>
                 </li>
